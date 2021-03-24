@@ -4,9 +4,9 @@ namespace App\Controller;
 
 Class ControllerHome 
 {
-    public function __construct()
+    public function home()
     {
-        echo "teste";
+        echo "Page home";
     }
 }
 

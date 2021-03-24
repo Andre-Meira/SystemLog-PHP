@@ -3,38 +3,8 @@ namespace App\Controller;
 
 Class ControllerCadastro 
 {
-    public function __construct()
+    public function cadastrar()
     {
-        echo "teste";
+        echo "Page Cadastro";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// include '../models/connect.php';
-
-// if($result = DB::get_UserDB($_POST["User"]))
-// {
-//     echo "id: " . $result["id"]. " - Name: " . $result["usuario"];
-// }
-// else
-// {
-//     echo "Não exite!";
-// }

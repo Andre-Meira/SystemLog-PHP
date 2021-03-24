@@ -1,12 +1,13 @@
 <?php
-
 namespace App\Controller;
+
+use App\models\DB;
 
 Class ControllerLogin 
 {
-    public function __construct()
+    public function loginUser()
     {
-        echo "teste";
+        echo "Page Login";
     }
 }
 

@@ -1,5 +1,10 @@
 <?php
+namespace App\models;
+
+use mysqli;
+
 include './config/config.php';
+
 class DB 
 {
     private const HOST = HOST_DB;
@@ -12,7 +17,6 @@ class DB
     public function connnet_DB()
     {
         $connect = new mysqli(self::HOST, self::USER, self::PASSWORD, self::DB, self::PORT);
-        $connect = mysqli_connect(self::HOST, self::USER, self::PASSWORD, self::DB, self::PORT);
         if ($connect->connect_error) 
         {
             printf("Connect falied ", mysqli_connect_error());
@@ -39,8 +43,7 @@ class DB
     }
 
     public function insert_Valor($User, $Password, $table)
-    {
-        
+    { 
         $connect = $this->connnet_DB();
         $result_Insert = $connect->query("insert into $table value (default, '$User', '$Password')");
         return "Insert Sucess!!";
